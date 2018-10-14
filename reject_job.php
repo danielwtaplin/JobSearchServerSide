@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: danieltaplin
- * Date: 15/10/18
- * Time: 12:19 PM
- */
 require "jinder_conn.php";
 $user = $_POST["user"];
 $job = $_POST["job"];
