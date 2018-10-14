@@ -10,13 +10,21 @@ $user = $_POST["user"];
 $job = $_POST["job"];
 $resume = $_POST["cv"];
 $resumePath = $_POST["cv_path"];
+$resumeType = $_POST["cv_type"];
+$resumeName = $_POST["cv_name"];
 $coverLetter = $_POST["cover"];
 $coverLetterPath = $_POST["cover_path"];
+$coverLetterType = $_POST["cover_type"];
+$coverLetterName = $_POST["cover_name"];
 if(isset($resume)){
-
+    $fileName = "resumes/" . $resumeName . "." . $resumeType;
+    file_put_contents($fileName, $resume);
+    $resumePath = $fileName;
 }
 if(isset($coverLetter)){
-
+    $fileName = "coverLetters/" . $coverLetterName . "." . $coverLetterType;
+    file_put_contents($fileName, $coverLetter);
+    $coverLetterPath = $fileName;
 }
 $stmt;
 if(isset($resumePath) && isset($coverLetterPath)){
