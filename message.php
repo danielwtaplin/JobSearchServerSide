@@ -13,7 +13,7 @@ class Message
     public $message;
     public $date;
 
-    public static function ListingSal($sender, $recipient, $message, $date) {
+    public static function NewMessage($sender, $recipient, $message, $date) {
         $obj = new Message();
         $obj->sender = $sender;
         $obj->recipient = $recipient;
